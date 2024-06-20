@@ -1,0 +1,23 @@
+---
+apiVersion: 1
+
+datasources:
+  - name: home-assistant
+    uid: pgha
+    orgId: 1
+    type: postgres
+    access: proxy
+    url: home-assistant-postgresql-hl.home-automation.svc.cluster.local
+    database: home-assistant
+    user: home-assistant
+    basicAuth: false
+    secureJsonData:
+      password: ${POSTGRESS_HOME_ASSISTANT_PASSWORD}
+    jsonData:
+      sslmode: "disable"
+      tlsAuth: false
+      tlsAuthWithCACert: false
+      connMaxLifetime: 14400
+      postgresVersion: 14
+      timescaledb: false
+    isDefault: true

@@ -1,4 +1,7 @@
 ---
+ignore: |
+  grafana/dashboards/
+
 rules:
   braces: enable
   brackets: enable

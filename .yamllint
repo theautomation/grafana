@@ -1,6 +1,6 @@
 ---
 ignore: |
-  grafana/dashboards/
+  src/dashboards/
 
 rules:
   braces: enable
